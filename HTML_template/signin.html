@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind Cdn  -->
+    <link
+      href="https://unpkg.com/tailwindcss@1.2.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- fontawesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Sign In Here!</title>
+  </head>
+  <body>
+    <!-- Navigation Section  -->
+    <div
+      class="flex p-1 flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+    >
+      <div class="p-4 flex flex-row items-center justify-between">
+        <a href=""> <img src="/html_template/images/Group 5.png" alt="" /></a>
+      </div>
+
+      <button class="flex bg-gray-300 rounded-lg p-3 text_Subtitles">
+        <span>English (UK) </span>
+        <i class="ml-2 mt-1 fa-solid fa-chevron-down"></i>
+      </button>
+    </div>
+
+    <!-- Signup Section  -->
+
+    <div class="flex justify-center">
+      <div class="text-center">
+        <h1 class="font-semibold text-2xl mb-3">Sign In</h1>
+        <h4 class="text_Subtitles text-1xl">
+          Welcome back, you've been missed!
+        </h4>
+        <!-- Social Sign in  -->
+        <div class="flex p-2 mr-4">
+          <a href="#" class="flex m-2 ml-4 bg-gray-300 rounded-lg p-3">
+            <img
+              class="mr-2 fa-brands fa-google"
+              src="./images/googleIcon.png"
+              alt=""
+            />
+            <h3 class="text_Subtitles">Sign Up With Google</h3>
+          </a>
+          <a href="#" class="flex m-2 ml-4 bg-gray-300 rounded-lg p-3">
+            <i class="mr-2 mt-1 fa-brands fa-apple"></i>
+            <h3 class="">Sign Up With Apple</h3>
+          </a>
+        </div>
+
+        <div class="flex items-center py-4">
+          <div class="flex-grow h-px bg-gray-400"></div>
+          <span class="flex-shrink text-2xl text-gray-500 px-4 font-light"
+            >Or</span
+          >
+          <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+
+        <div class="textInput text_Subtitles mb-8">
+          <i class="ml-3 fa-solid fa-at"></i>
+          <input type="password" placeholder="Your Email" />
+        </div>
+
+        <div class="textInput text_Subtitles mb-8">
+          <i class="ml-3 fa-solid fa-lock"></i>
+          <input type="password" placeholder="Password" />
+        </div>
+
+        <div>
+          <label>
+            <input type="checkbox" class="" />
+            <span>Remember Me</span>
+          </label>
+        </div>
+
+        <div>
+          <button class="mt-2 bg-blue-700 w-full font-semibold text-white h-12 rounded-lg">
+            Sign In
+          </button>
+        </div>
+
+        <div class="mt-2 ml-5 flex">
+          <h3 class="text_Subtitles">Already Have an account?</h3>
+          <a class="ml-3 text-blue-700" href="signup.html">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
