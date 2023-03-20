@@ -28,26 +28,29 @@ css \
 6. Navbar Design Complete
 7. SignUp Component 
 8. SignUp Component
+6. Dashboard Design Started
+    - Users showing in a table from API
+    - Pagination Design  (Not Yet Functional)
+    - Dashboard Separate Navigation 
+    - Menubar With Icons 
+    - User's Page Data Showing With Table
+7. 
+
 
 ### Project Installation
 
 ### Clone Repo
 ``` 
 git clone https://github.com/Anaskaysar/Junior-Frontend-Developer-Interview-Task.git
-
 cd task
 ```
 ## Env File
-
 ` copy env.txt to root directory and rename it .env.local `
-
 ### Install Dependency
 ``` 
 npm i
 ```
-
 ### Run The Project
-
 ```
 npm run
 ```
