@@ -17,31 +17,50 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css"
+    rel="stylesheet"
+    type="text/css"
+  />
   </head>
   <body>
-    <!-- Sidebar  -->
-    <div class="flex min-h-screen flex-row text-gray-800">
-      <aside
-        class="sidebar w-48 -translate-x-full transform p-4 transition-transform duration-150 ease-in md:translate-x-0"
-      >
-        <div class="my-4 w-full border-b-1 border-indigo-100 text-center">
-          <img src="./images/Group 5.png" alt="" />
+
+    <!-- Navigation  -->
+    <div className="navbar">
+      <div className="flex-1">
+        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+      </div>
+
+
+      <div className="flex-none gap-2">
+        
+        <div className="form-control">
+          <input type="text" placeholder="Search" className="input input-bordered" />
         </div>
-        <div class="my-4">
-          <a href="">Dashboard</a>
-          <a href="">Users</a>
-          <a href="">Sales</a>
+
+
+
+        <div className="dropdown dropdown-end">
+          <label tabindex="0" className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+              <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            </div>
+          </label>
+          <ul tabindex="0" className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+            <li>
+              <a className="justify-between">
+                Profile
+                <span className="badge">New</span>
+              </a>
+            </li>
+            <li><a>Settings</a></li>
+            <li><a>Logout</a></li>
+          </ul>
         </div>
-      </aside>
-      <main
-        class="main -ml-48 flex flex-grow flex-col p-4 transition-all duration-150 ease-in md:ml-0"
-      >
-        <div></div>
-        <div
-          class="flex h-full items-center justify-center bg-white text-center text-5xl font-bold shadow-md"
-        >
-          Content
-        </div>
+      </div>
+    </div>
+
+    
       </main>
     </div>
   </body>
