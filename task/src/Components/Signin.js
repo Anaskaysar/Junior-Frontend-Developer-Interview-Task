@@ -1,12 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import googleIcon from "../Assests/images/googleIcon.png"
-
+import { useAuth } from "../contextapi/AuthContext"
 function Signin() {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState("");
+    const { signin } = useAuth();
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        try {
+            setError("");
+            setLoading(true);
+            await signin(email, password);
+            navigate(from,{replace:true})
+
+        } catch (err) {
+            console.log(err);
+            setLoading(false);
+            setError("Failed to Login")
+        }
+    }
+
     return (
         <div>
             {/* <!-- Signup Section  --> */}
-
             <div className="flex justify-center">
                 <div className="text-center">
                     <h1 className="font-semibold text-2xl mb-3">Sign In</h1>
@@ -33,31 +57,45 @@ function Signin() {
                         <div className="flex-grow h-px bg-gray-400"></div>
                     </div>
 
-                    <div className="textInput text_Subtitles mb-8">
-                        <i className="ml-3 fa-solid fa-at"></i>
-                        <input type="password" placeholder="Your Email" />
-                    </div>
+                    <form onSubmit={handleSubmit}>
+                        <div className="textInput text_Subtitles mb-8">
+                            <i className="ml-3 fa-solid fa-at"></i>
+                            <input
+                                type="email"
+                                placeholder="Your Email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </div>
 
-                    <div className="textInput text_Subtitles mb-8">
-                        <i className="ml-3 fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Password" />
-                    </div>
+                        <div className="textInput text_Subtitles mb-8">
+                            <i className="ml-3 fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Create Password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                        </div>
 
-                    <div>
-                        <label>
-                            <input type="checkbox" />
-                            <span className='ml-2'>Remember Me</span>
-                        </label>
-                    </div>
+                        <div>
+                            <label>
+                                <input type="checkbox" />
+                                <span className='ml-2'>Remember Me</span>
+                            </label>
+                        </div>
 
-                    <div>
-                        <button className="mt-2 bg-blue-700 w-full font-semibold text-white h-12 rounded-lg">
-                            Sign In
-                        </button>
-                    </div>
+                        <div>
+                            <button disabled={loading} className="mt-2 bg-blue-700 w-full font-semibold text-white h-12 rounded-lg" type="submit" >
+                                Sign In
+                            </button>
+                        </div>
+
+                        {error && <p className="error">{error}</p>}
+                    </form>
 
                     <div className="mt-2 ml-5 flex">
-                        <h3 className="ml-2 text_Subtitles">Donot Have an account?</h3>
+                        <h3 className="ml-2 text_Subtitles">Do not Have an account?</h3>
                         <Link to="/signup" className="ml-3 text-blue-700">Sign Up</Link>
                     </div>
                 </div>

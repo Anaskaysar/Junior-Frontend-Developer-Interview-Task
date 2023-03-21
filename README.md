@@ -36,8 +36,11 @@ css </del> \
     - User's Page Data Showing With Table
     - Separate Routes Created For Regular Home and Dashboard home
     - Pagination Done
-7. 
-
+7. Firebase Installation
+8. React Hook Form
+9. Firbase Project Setup Done and Deployed on Firebase
+10. Email Authentication With Firebase
+11. Private Route Set Up Done
 
 ### Project Installation
 

@@ -1,7 +1,13 @@
 import React from 'react'
+import { useAuth } from '../../contextapi/AuthContext';
 
 function DashContentTop() {
     const avatar = "https://reqres.in/img/faces/7-image.jpg"
+
+    const { currentUser, signout } = useAuth();
+    console.log(currentUser)
+
+
     return (
         <>
             <div class="mt-3 bg-base-100">
@@ -17,23 +23,17 @@ function DashContentTop() {
                                 <span class="badge badge-xs badge-primary indicator-item"></span>
                             </div>
                         </button>
-                        <div class="dropdown dropdown-end">
+                        {currentUser && <div class="dropdown dropdown-end">
                             <label tabindex="0" class="btn btn-ghost btn-circle avatar">
                                 <div class="w-10 rounded-full">
                                     <img src={avatar} />
                                 </div>
                             </label>
                             <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                                <li>
-                                    <a class="justify-between">
-                                        Profile
-                                        <span class="badge">New</span>
-                                    </a>
-                                </li>
-                                <li><a>Settings</a></li>
-                                <li><a>Logout</a></li>
+                                <li>{currentUser.displayName} </li>
+                                <button type='submit' onClick={signout}  >Logout</button>
                             </ul>
-                        </div>
+                        </div>}
                     </div>
                 </div>
             </div></>

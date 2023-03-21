@@ -1,8 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { async } from '@firebase/util';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import googleIcon from "../Assests/images/googleIcon.png"
-
+import {useAuth} from "../contextapi/AuthContext"
 function Signup() {
+
+    const [username,setUsername] = useState("");
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
+    const [agree,setAgree] = useState("");
+    const [loading,setLoading] = useState("");
+    const [error,setError] = useState("");
+    const {signup} = useAuth();
+    const history = useNavigate();
+
+    async function handleSubmit(e){
+        e.preventDefault();
+        try{
+            setError("");
+            setLoading(true);
+            await signup(email,password,username);
+            history("/dashboard")
+
+        } catch(err){
+            console.log(err);
+            setLoading(false);
+            setError("Failed to create an account")
+        }
+
+    }
+
     return (
         <div>
             <div className="flex justify-center md:flex-none">
@@ -32,30 +59,50 @@ function Signup() {
                         >
                         <div className="flex-grow h-px bg-gray-400"></div>
                     </div>
+                    <form onSubmit={handleSubmit}>
 
-                    <div className="textInput text_Subtitles mb-8">
-                        <i className="ml-3 fa-solid fa-at"></i>
-                        <input type="password" placeholder="Your Email" />
-                    </div>
+                        <div className="textInput text_Subtitles mb-8">
+                            <i className="ml-3 fa-solid fa-at"></i>
+                            <input 
+                            type="email" 
+                            placeholder="Your Email"
+                            value={email}
+                            onChange = {(e)=>setEmail(e.target.value)}
+                            required
+                            />
+                        </div>
 
-                    <div className="textInput text_Subtitles mb-8">
-                        <i className="ml-3 fa-sharp fa-solid fa-face-smile"></i>
-                        <input type="password" placeholder="Your Name" />
-                    </div>
+                        <div className="textInput text_Subtitles mb-8">
+                            <i className="ml-3 fa-sharp fa-solid fa-face-smile"></i>
+                            <input type="name" placeholder="Your Name" 
+                            value={username}
+                            onChange = {(e)=>setUsername(e.target.value)}
+                            required
+                            />
+                        </div>
 
-                    <div className="textInput text_Subtitles mb-8">
-                        <i className="ml-3 fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Create Password" />
-                    </div>
+                        <div className="textInput text_Subtitles mb-8">
+                            <i className="ml-3 fa-solid fa-lock"></i>
+                            <input type="password" placeholder="Create Password" 
+                            value={password}
+                            onChange = {(e)=>setPassword(e.target.value)}
+                            required
+                            />
+                        </div>
 
-                    <div>
-                        <input type="checkbox" className="" />
-                        <span className='ml-3'>I agree to the Terms & Conditions</span>
-                    </div>
+                        <div>
+                            <input type="checkbox" className="p-2" value={agree}
+                            onChange = {(e)=>setAgree(e.target.value)}
+                            required />
+                            <span className='ml-3'>I agree to the Terms & Conditions</span>
+                        </div>
 
-                    <div>
-                        <button className=" mt-2 bg-blue-700 w-full font-semibold text-white h-12 rounded-lg">Sign Up</button>
-                    </div>
+                        <div>
+                            <button disabled={loading} className=" mt-2 bg-blue-700 w-full font-semibold text-white h-12 rounded-lg" type="submit" >Sign Up</button>
+                        </div>
+
+                        {error && <p className="error">{error}</p>}
+                    </form>
 
                     <div className=" mt-2 ml-5 flex">
                         <h3 className="text_Subtitles"> Already Have an account?</h3>

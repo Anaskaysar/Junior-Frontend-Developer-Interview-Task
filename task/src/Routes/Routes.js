@@ -7,6 +7,7 @@ import DashoardLayout from "../Layout/DashoardLayout";
 import DashUsers from "../Components/Dashboard/DashUsers"
 import DashSales from "../Components/Dashboard/DashSales"
 import DashHome from "../Components/Dashboard/DashHome";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -29,19 +30,19 @@ const router = createBrowserRouter([
         ]
     },{
         path:'/dashboard',
-        element: <DashoardLayout/>,
+        element: <PrivateRoute><DashoardLayout/></PrivateRoute>,
         children:[
             {
                 path:'/dashboard/home',
-                element: <DashHome />
+                element: <PrivateRoute><DashHome /></PrivateRoute>
             },
             {
                 path:'/dashboard/users',
-                element: <DashUsers />
+                element: <PrivateRoute> <DashUsers /> </PrivateRoute> 
             },
             {
                 path:'/dashboard/sales',
-                element: <DashSales />
+                element: <PrivateRoute> <DashSales /> </PrivateRoute> 
             }
         ]
     }
