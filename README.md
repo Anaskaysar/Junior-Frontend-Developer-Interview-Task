@@ -1,5 +1,6 @@
 <h1 align="center">Junior Frontend Developer Interview Task</h1>
 
+<a href="https://anchorblock-task.web.app/"> Live Link </a>
 ### Task Description
 
 ● <del> Find design (figma file) attached with the mail </del> \
@@ -10,6 +11,8 @@ css </del> \
 ● <del> Create private routes for dashboard, users page. </del> \
 ● <del>Integrate user list api with pagination </del> \
 ● <del> For api endpoints check this https://reqres.in </del>
+
+### Figma File Was Provided By Authority
 
 ### Library Used
 
@@ -39,7 +42,7 @@ css </del> \
 7. Firebase Installation
 8. React Hook Form
 9. Firbase Project Setup Done and Deployed on Firebase
-10. Email Authentication With Firebase
+10. Email Authentication With Firebase - Google and Apple Also Cann be Done in the same way
 11. Private Route Set Up Done
 
 ### Not Done

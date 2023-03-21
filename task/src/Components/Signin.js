@@ -27,7 +27,6 @@ function Signin() {
             setError("Failed to Login")
         }
     }
-
     return (
         <div>
             {/* <!-- Signup Section  --> */}

@@ -1,0 +1,68 @@
+[debug] [2023-03-21T16:22:23.636Z] ----------------------------------------------------------------------
+[debug] [2023-03-21T16:22:23.636Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-03-21T16:22:23.637Z] CLI Version:   11.24.1
+[debug] [2023-03-21T16:22:23.637Z] Platform:      darwin
+[debug] [2023-03-21T16:22:23.637Z] Node Version:  v18.14.2
+[debug] [2023-03-21T16:22:23.637Z] Time:          Tue Mar 21 2023 22:22:23 GMT+0600 (Bangladesh Standard Time)
+[debug] [2023-03-21T16:22:23.638Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-21T16:22:23.667Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-21T16:22:23.667Z] > authorizing via signed-in user (kaysarulanas2@gmail.com)
+[debug] [2023-03-21T16:22:23.667Z] [iam] checking project anchorblock-task for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-21T16:22:23.668Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/anchorblock-task:testIamPermissions [none]
+[debug] [2023-03-21T16:22:23.668Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/anchorblock-task:testIamPermissions x-goog-quota-user=projects/anchorblock-task
+[debug] [2023-03-21T16:22:23.668Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anchorblock-task:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-21T16:22:25.274Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/anchorblock-task:testIamPermissions 200
+[debug] [2023-03-21T16:22:25.274Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anchorblock-task:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-21T16:22:25.275Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/anchorblock-task [none]
+[debug] [2023-03-21T16:22:25.882Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/anchorblock-task 200
+[debug] [2023-03-21T16:22:25.882Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/anchorblock-task {"projectId":"anchorblock-task","projectNumber":"149735422680","displayName":"anchorblock-task","name":"projects/anchorblock-task","resources":{"hostingSite":"anchorblock-task"},"state":"ACTIVE","etag":"1_b2cd29fa-55ac-4e0d-ad5c-02ece26ebd3e"}
+[info] 
+[info] === Deploying to 'anchorblock-task'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-03-21T16:22:25.887Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anchorblock-task/versions [none]
+[debug] [2023-03-21T16:22:25.887Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anchorblock-task/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-03-21T16:22:27.297Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anchorblock-task/versions 200
+[debug] [2023-03-21T16:22:27.298Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anchorblock-task/versions {"name":"projects/149735422680/sites/anchorblock-task/versions/ad24f17eda00c63e","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[anchorblock-task]: beginning deploy... 
+[info] i  hosting[anchorblock-task]: found 15 files in build 
+[debug] [2023-03-21T16:22:27.304Z] [hosting] uploading with 200 concurrency
+[debug] [2023-03-21T16:22:27.468Z] [hosting] hash cache [YnVpbGQ] stored for 15 files
+[debug] [2023-03-21T16:22:27.468Z] [hosting][hash queue][FINAL] {"max":157,"min":6,"avg":18.4,"active":0,"complete":15,"success":15,"errored":0,"retried":0,"total":15,"elapsed":161}
+[debug] [2023-03-21T16:22:27.468Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/149735422680/sites/anchorblock-task/versions/ad24f17eda00c63e:populateFiles [none]
+[debug] [2023-03-21T16:22:27.468Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/149735422680/sites/anchorblock-task/versions/ad24f17eda00c63e:populateFiles {"files":{"/asset-manifest.json":"fe2a54af8ea9faddda036730760b636fdf219f3a255f1c90f7cb5b5ff8206fd5","/favicon.ico":"b72f7455f00e4e58792d2bca892abb068e2213838c0316d6b7a0d6d16acd1955","/manifest.json":"9db712a40881bff85eb582eebbeae20883be2cbc5b94f322cc24f375d94abe12","/index.html":"81a617d1376d8cf00192514359804091c19f5f00039a5775ac57f8ae6170ef14","/static/js/787.a5a00b74.chunk.js":"91edc6bc2993634b64b503acf8aadcbda248ca42e979b2644358e0326a0fe49d","/static/js/787.a5a00b74.chunk.js.map":"9f2e34cbabd0e4151f3d9c8ecf6b72242e3dfe8e92eebb9012c9295c65ea18e9","/static/js/main.6e81439c.js.LICENSE.txt":"2a2acfbb3b26e49e51a474eb3d8675a91c38bddd275b2571d2bc077ed0732edf","/robots.txt":"391d14b3c2f8c9143a27a28c7399585142228d4d1bdbe2c87ac946de411fa9a2","/static/media/menu_icon.54fcdd36d3b17342fc131a771a16c20a.svg":"c434536a4cf71db4a94ede36a6e2c41f8de2f7da65f1da4f63fffca76b8d4ce9","/static/media/sales_invoice.ba0dbfd4259d4740a05b8d0d986419d7.svg":"2890ff6ed8c34cff57c86d4627c95d90b039703506a6c1f97f8a196283419005","/static/media/users_icon.362474f62c29813b0eee153ce5e78027.svg":"01e6b94512bd3026c32bc907b057007d412a6d9894d3b38175f9735ae62e8ff8","/static/css/main.5e4470d3.css.map":"c818a6f4378353a710954753755eab114a38e4b353b9ef5a1e0ff6a85324310e","/static/css/main.5e4470d3.css":"4c50801e740978648881033c5f1a83001905e3af3d453e20f98a6e2c087fb05b","/static/js/main.6e81439c.js":"bd6f3a0c7e617507cf72f1645d12e915e661c70074ac5f156a9b4308922d85d6","/static/js/main.6e81439c.js.map":"390750852f4d438797b542a919315b51da99e5db2cf534823ee87c096c02424a"}}
+[debug] [2023-03-21T16:22:28.645Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/149735422680/sites/anchorblock-task/versions/ad24f17eda00c63e:populateFiles 200
+[debug] [2023-03-21T16:22:28.645Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/149735422680/sites/anchorblock-task/versions/ad24f17eda00c63e:populateFiles {"uploadRequiredHashes":["390750852f4d438797b542a919315b51da99e5db2cf534823ee87c096c02424a"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/anchorblock-task/versions/ad24f17eda00c63e/files"}
+[debug] [2023-03-21T16:22:28.646Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/anchorblock-task/versions/ad24f17eda00c63e/files/390750852f4d438797b542a919315b51da99e5db2cf534823ee87c096c02424a [none]
+[debug] [2023-03-21T16:22:28.646Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/anchorblock-task/versions/ad24f17eda00c63e/files/390750852f4d438797b542a919315b51da99e5db2cf534823ee87c096c02424a [stream]
+[debug] [2023-03-21T16:22:28.646Z] [hosting][populate queue][FINAL] {"max":1179,"min":1179,"avg":1179,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1180}
+[debug] [2023-03-21T16:22:28.646Z] [hosting] uploads queued: 1
+[debug] [2023-03-21T16:22:31.252Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/anchorblock-task/versions/ad24f17eda00c63e/files/390750852f4d438797b542a919315b51da99e5db2cf534823ee87c096c02424a 200
+[debug] [2023-03-21T16:22:31.252Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/anchorblock-task/versions/ad24f17eda00c63e/files/390750852f4d438797b542a919315b51da99e5db2cf534823ee87c096c02424a [stream]
+[debug] [2023-03-21T16:22:31.253Z] [hosting][upload queue][FINAL] {"max":2607,"min":2607,"avg":2607,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2608}
+[info] ✔  hosting[anchorblock-task]: file upload complete 
+[debug] [2023-03-21T16:22:31.254Z] [hosting] deploy completed after 3955ms
+[debug] [2023-03-21T16:22:31.258Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "anchorblock-task"
+    },
+    "version": "projects/149735422680/sites/anchorblock-task/versions/ad24f17eda00c63e"
+  }
+]
+[info] i  hosting[anchorblock-task]: finalizing version... 
+[debug] [2023-03-21T16:22:31.260Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anchorblock-task/versions/ad24f17eda00c63e updateMask=status%2Cconfig
+[debug] [2023-03-21T16:22:31.260Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/anchorblock-task/versions/ad24f17eda00c63e {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
