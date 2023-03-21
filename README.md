@@ -5,9 +5,9 @@
 ● <del> Find design (figma file) attached with the mail </del> \
 ● <del> Create four pages(sign in, sign up, users & a blank dashboard page) with react, tailwind 
 css </del> \
-● Try to make pixel perfect ui \
+● <del> Try to make pixel perfect ui </del> \
 ● Integrate authentication(with api integration) using redux toolkit \
-● Create private routes for dashboard, users page. \
+● <del> Create private routes for dashboard, users page. </del> \
 ● <del>Integrate user list api with pagination </del> \
 ● <del> For api endpoints check this https://reqres.in </del>
 
@@ -42,6 +42,10 @@ css </del> \
 10. Email Authentication With Firebase
 11. Private Route Set Up Done
 
+### Not Done
+
+1. RTK Query Use ()
+
 ### Project Installation
 
 ### Clone Repo
@@ -57,5 +61,5 @@ npm i
 ```
 ### Run The Project
 ```
-npm run
+npm start
 ```
