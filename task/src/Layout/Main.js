@@ -5,8 +5,8 @@ import { Outlet } from 'react-router-dom'
 function Main() {
   return (
     <div>
-        {/* <Navbar/> */}
-        <Outlet/>
+      <Navbar />
+      <Outlet />
     </div>
   )
 }

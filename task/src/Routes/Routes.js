@@ -3,9 +3,12 @@ import Main from "../Layout/Main";
 import Home from "../Components/Home"
 import Signin from "../Components/Signin";
 import Signup from "../Components/Signup";
-import DashHome from "../Components/Dashboard/DashHome"
+import DashoardLayout from "../Layout/DashoardLayout";
 import DashUsers from "../Components/Dashboard/DashUsers"
-import DashBody from "../Components/Dashboard/DashBody";
+import DashSales from "../Components/Dashboard/DashSales"
+import DashHome from "../Components/Dashboard/DashHome";
+
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -23,13 +26,22 @@ const router = createBrowserRouter([
                 path: '/signup',
                 element: <Signup/>
             },
+        ]
+    },{
+        path:'/dashboard',
+        element: <DashoardLayout/>,
+        children:[
             {
-                path: '/dashboard',
-                element: <DashBody/>
+                path:'/dashboard/home',
+                element: <DashHome />
             },
             {
-                path: '/dashboard/users',
-                element: <DashUsers/>
+                path:'/dashboard/users',
+                element: <DashUsers />
+            },
+            {
+                path:'/dashboard/sales',
+                element: <DashSales />
             }
         ]
     }

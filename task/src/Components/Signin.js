@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import googleIcon from "../Assests/images/googleIcon.png"
 
 function Signin() {
@@ -57,7 +58,7 @@ function Signin() {
 
                     <div className="mt-2 ml-5 flex">
                         <h3 className="text_Subtitles">Already Have an account?</h3>
-                        <a className="ml-3 text-blue-700" href="signup.html">Sign Up</a>
+                        <Link to="/signup" className="ml-3 text-blue-700">Sign Up</Link>
                     </div>
                 </div>
             </div>
