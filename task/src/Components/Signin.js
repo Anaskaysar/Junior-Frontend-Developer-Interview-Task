@@ -46,7 +46,7 @@ function Signin() {
                     <div>
                         <label>
                             <input type="checkbox" />
-                            <span>Remember Me</span>
+                            <span className='ml-2'>Remember Me</span>
                         </label>
                     </div>
 
@@ -57,7 +57,7 @@ function Signin() {
                     </div>
 
                     <div className="mt-2 ml-5 flex">
-                        <h3 className="text_Subtitles">Already Have an account?</h3>
+                        <h3 className="ml-2 text_Subtitles">Donot Have an account?</h3>
                         <Link to="/signup" className="ml-3 text-blue-700">Sign Up</Link>
                     </div>
                 </div>

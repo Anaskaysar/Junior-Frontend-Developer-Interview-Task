@@ -1,11 +1,11 @@
 import React from 'react'
 import logo from "../Assests/images/logo.png"
-
+import { Link } from 'react-router-dom'
 function Navbar() {
     return (
         <div className="navbar bg-base-100">
             <div className="ml-8 mt- 3 navbar-start">
-                <img src={logo} alt=""/>
+                <Link to='/'><img src={logo} alt=""/></Link>
             </div>
 
             <div className="mr-8 mt-3 navbar-end">
