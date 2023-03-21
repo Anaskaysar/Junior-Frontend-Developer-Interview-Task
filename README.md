@@ -49,6 +49,14 @@ css </del> \
 
 1. RTK Query Use ()
 
+## Screen Shots
+
+<img src="./Demo Screnshots/1.png" width="45%"></img> 
+<img src="./Demo Screnshots/2.png" width="45%"></img>
+<img src="./Demo Screnshots/3.png" width="45%"></img>
+<img src="./Demo Screnshots/4.png" width="45%"></img>
+<img src="./Demo Screnshots/5.png" width="45%"></img>
+
 ### Project Installation
 
 ### Clone Repo
