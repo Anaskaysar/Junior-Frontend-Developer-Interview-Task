@@ -5,7 +5,7 @@ import DashContentTop from './DashContentTop'
 function DashHome() {
   return (
     <>
-      <h1>This is Home</h1>
+      <h1 className='ml-3 mt-5 text-center text-3xl font-bold'>Welcome To The Dashboard</h1>
     </>
   )
 }

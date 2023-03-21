@@ -4,9 +4,9 @@ function DashContentTop() {
     const avatar = "https://reqres.in/img/faces/7-image.jpg"
     return (
         <>
-            <div class="bg-base-100">
+            <div class="mt-3 bg-base-100">
                 <div class="flex gap-10 justify-items-end">
-                    <div class="form-control">
+                    <div class="form-control items-center">
                         <input type="text" placeholder="Search" class="input input-bordered" />
                     </div>
                     <div className='gap-10'>

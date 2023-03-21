@@ -50,7 +50,7 @@ function Signup() {
 
                     <div>
                         <input type="checkbox" className="" />
-                        <span>I agree to the Terms & Conditions</span>
+                        <span className='ml-3'>I agree to the Terms & Conditions</span>
                     </div>
 
                     <div>

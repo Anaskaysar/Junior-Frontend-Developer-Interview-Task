@@ -2,14 +2,14 @@
 
 ### Task Description
 
-● Find design (figma file) attached with the mail \
-● Create four pages(sign in, sign up, users & a blank dashboard page) with react, tailwind 
-css \
+● <del> Find design (figma file) attached with the mail </del> \
+● <del> Create four pages(sign in, sign up, users & a blank dashboard page) with react, tailwind 
+css </del> \
 ● Try to make pixel perfect ui \
 ● Integrate authentication(with api integration) using redux toolkit \
 ● Create private routes for dashboard, users page. \
-● Integrate user list api with pagination \
-● For api endpoints check this https://reqres.in 
+● <del>Integrate user list api with pagination </del> \
+● <del> For api endpoints check this https://reqres.in </del>
 
 ### Library Used
 
@@ -34,6 +34,8 @@ css \
     - Dashboard Separate Navigation 
     - Menubar With Icons 
     - User's Page Data Showing With Table
+    - Separate Routes Created For Regular Home and Dashboard home
+    - Pagination Done
 7. 
 
 

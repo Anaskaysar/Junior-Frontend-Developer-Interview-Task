@@ -1,21 +1,32 @@
 import React, { useEffect, useState } from 'react'
+import Pagination from './Pagination';
 
 
 export default function DashUsers() {
 
   const [users, setUsers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [userPerpage, setuserPerpage] = useState(5);
+
+
+
   useEffect(() => {
     //Fetching Data From Api
-    fetch(`https://reqres.in/api/users?page=2`)
+    fetch(`https://reqres.in/api/users/`)
       .then(res => res.json())
       .then(data => {
         setUsers(data.data);
       })
 
   }, [])
+
+  const lastUserIndex = currentPage * userPerpage;
+  const firstUserIndex = lastUserIndex - userPerpage;
+  const currentUser = users.slice(firstUserIndex, lastUserIndex)
+
   return (
     <div>
-      <h1 className='font-bold'>Users List</h1>
+      <h1 className='ml-3 font-bold'>Users List</h1>
       <div className="overflow-x-auto m-2">
         <table className="table w-full">
           {/* <!-- Table head --> */}
@@ -30,7 +41,7 @@ export default function DashUsers() {
           {/* Table Body  */}
           <tbody>
             {
-              users.map((user, index) =>
+              currentUser.map((user, index) =>
                 <tr key={index}>
                   <th>{user.id}</th>
                   <td>
@@ -52,14 +63,7 @@ export default function DashUsers() {
             }
           </tbody>
         </table>
-        <div className="p-1">
-          <button className="btn mr-2 btn-outline">«</button>
-          <button className="btn mr-2 btn-outline">2</button>
-          <button className="btn mr-2 btn-outline">3</button>
-          <button className="btn mr-2 btn-outline">...</button>
-          <button className="btn mr-2 btn-outline">10</button>
-          <button className="btn mr-2 btn-outline">»</button>
-        </div>
+        <Pagination totalUser={users.length} userPerpage={userPerpage} setCurrentPage={setCurrentPage} currentPage={currentPage} />
       </div>
     </div>
   )
