@@ -1,39 +1,34 @@
 import { createBrowserRouter } from "react-router-dom";
-import Main from "../Layout/Main";
-import Home from "../Components/Home"
-import Signin from "../Components/Signin";
-import Signup from "../Components/Signup";
-import DashoardLayout from "../Layout/DashoardLayout";
-import DashUsers from "../Components/Dashboard/DashUsers"
-import DashSales from "../Components/Dashboard/DashSales"
-import DashHome from "../Components/Dashboard/DashHome";
-import PrivateRoute from "./PrivateRoute";
-
+import PrivateRoute from "../components/PrivateRoute";
+import PublicRoute from "../components/PublicRoute";
+import Dashboard from "../pages/Dashboard";
+import Signin from "../pages/Signin";
+import Signup from "../pages/Signup";
+import DashHome from "../components/DashComponents/DashHome"
+import DashUsers from "../components/DashComponents/DashUsers"
+import DashSales from "../components/DashComponents/DashSales"
+import Home from "../pages/Home";
 
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <Main></Main>, 
+        element: <PublicRoute><Home/></PublicRoute> , 
         children: [
             {
-                path: '/',
-                element: <Home/>
-            },
-            {
                 path: '/signin',
-                element: <Signin/>
+                element: <PublicRoute><Signin/></PublicRoute>
             },
             {
                 path: '/signup',
-                element: <Signup/>
+                element: <PublicRoute><Signup/></PublicRoute>
             },
         ]
     },{
         path:'/dashboard',
-        element: <PrivateRoute><DashoardLayout/></PrivateRoute>,
+        element: <PrivateRoute><Dashboard/></PrivateRoute>,
         children:[
             {
-                path:'/dashboard/home',
+                path:'/dashboard',
                 element: <PrivateRoute><DashHome /></PrivateRoute>
             },
             {

@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <div className="navbar bg-base-100">
             <div className="ml-8 mt- 3 navbar-start">
-                <Link to='/'><img src={logo} alt=""/></Link>
+               <Link to= '/'> <img src={logo} alt="" /></Link>
             </div>
 
             <div className="mr-8 mt-3 navbar-end">

@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "email": "kaysarulanas2@gmail.com",
+      "password": "$2a$10$yBzfvpesZ3rdg7nH.azSN.5J/pXqTXK8tF3SbFM4bR3KW38PjaxWa",
+      "userName": "Anas",
+      "id": 3
+    },
+    {
+      "email": "kaysarulanas3@gmail.com",
+      "password": "$2a$10$nSKXuHQ2bAsjkF6hkIqMj.pq.Q13u6d7zzCtHAhNfr4NFprchvYvm",
+      "userName": "Anas2",
+      "id": 4
+    }
+  ]
+}
