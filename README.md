@@ -7,7 +7,7 @@
 ● <del> Create four pages(sign in, sign up, users & a blank dashboard page) with react, tailwind 
 css </del> \
 ● <del> Try to make pixel perfect ui </del> \
-● Integrate authentication(with api integration) using redux toolkit \
+● <del> Integrate authentication(with api integration) using redux toolkit </del> \
 ● <del> Create private routes for dashboard, users page. </del> \
 ● <del>Integrate user list api with pagination </del> \
 ● <del> For api endpoints check this https://reqres.in </del>
@@ -20,6 +20,7 @@ css </del> \
 - Tailwind CSS 
 - Daisy UI- Tailwind CSS Component Libray 
 - Fontawesome 
+- Redux, Redux-Toolkit
 
 ### Work Done
 
@@ -61,11 +62,11 @@ css </del> \
 
 ### Clone Repo
 ``` 
-git clone https://github.com/Anaskaysar/Junior-Frontend-Developer-Interview-Task.git
+git clone https://github.com/Anaskaysar/Junior-Frontend-Developer-Interview-Task/tree/redux-auth
 cd task
 ```
 ## Env File
-` copy env.txt to root directory and rename it .env.local `
+` copy env.txt to root directory and rename it .env`
 ### Install Dependency
 ``` 
 npm i
@@ -73,4 +74,18 @@ npm i
 ### Run The Project
 ```
 npm start
+```
+## For Server Side
+
+### Install Dependency
+
+```
+cd server
+```
+```
+npm i
+```
+```
+npm start
+
 ```
