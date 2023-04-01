@@ -9,8 +9,8 @@ import sales from "../../Assests/Icons/sales_invoice.svg"
 function DashSideNav() {
   return (
     <div className='border-r-4'>
-      <label for="my-drawer-2" class="drawer-overlay"></label>
-      <ul class="menu p-4 w-80 bg-base-100 text-base-content">
+      <label for="my-drawer-2" className="drawer-overlay"></label>
+      <ul className="menu p-4 w-80 bg-base-100 text-base-content">
         {/* -- Sidebar content here */}
         <li>
           <Link to='/dashboard'>

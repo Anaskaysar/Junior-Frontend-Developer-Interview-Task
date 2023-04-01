@@ -2,19 +2,19 @@ import React from 'react'
 import DashSideNav from '../components/DashComponents/DashSideNav'
 import DashContentTop from '../components/DashComponents/DashContentTop'
 import { Outlet } from 'react-router-dom';
+import DashUsers from '../components/DashComponents/DashUsers';
 
 function Dashboard() {
   return (
     <div>
-      <div class="drawer drawer-mobile">
-            <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-
-            <div class="ml-2 drawer-content flex flex-col">
-                <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-                <DashContentTop />    
-                <Outlet/>            
+      <div className="drawer drawer-mobile">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="ml-2 drawer-content flex flex-col">
+                <label for="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                <DashContentTop /> 
+                            
             </div>
-            <div class="drawer-side">
+            <div className="drawer-side">
                 <DashSideNav />
             </div>
         </div>
